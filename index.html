@@ -334,33 +334,36 @@
             width: 100%;
             max-width: 420px;
             margin: 0 auto;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 1.5rem;
-            box-shadow: 0 25px 50px rgba(5, 150, 105, 0.2);
-            border: 5px solid white;
-            object-fit: cover;
-            display: block;
-            transition: var(--transition);
-        }
-
-        .hero-image img:hover {
-            transform: scale(1.02);
+            padding: 20px;
         }
 
         .hero-image::before {
             content: '';
             position: absolute;
-            top: -20px;
-            right: -20px;
-            width: 100%;
-            height: 100%;
-            border: 2px solid var(--primary);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 5px solid var(--primary);
             border-radius: 1.5rem;
-            z-index: -1;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 25px 50px rgba(5, 150, 105, 0.2);
+            object-fit: cover;
+            display: block;
+            transition: var(--transition);
+            position: relative;
+            z-index: 0;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.02);
         }
 
         /* Stats */
@@ -1548,7 +1551,7 @@
             <nav class="footer-links" aria-label="Footer navigation">
                 <a href="https://github.com/ankitkailey18" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="https://linkedin.com/in/ankit-kailey" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="mailto:ankitkailey400@gmail.com">Email</a>
+                <a href="/cdn-cgi/l/email-protection#6c0d02070518070d05000915585c5c2c0b010d0500420f0301">Email</a>
             </nav>
         </div>
     </footer>
@@ -1558,7 +1561,7 @@
         ↑
     </button>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Mobile Menu Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
@@ -1666,11 +1669,4 @@
                 img.src = img.src;
             });
         } else {
-            // Fallback for browsers that don't support lazy loading
-            const script = document.createElement('script');
-            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
-            document.body.appendChild(script);
-        }
-    </script>
-</body>
-</html>
+            // Fa
